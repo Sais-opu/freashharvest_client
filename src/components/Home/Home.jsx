@@ -92,7 +92,7 @@ const Home = () => {
                 <h3 className="bg-gray-100 rounded-xl inline-block py-1 px-3 text-[#749B3F] font-semibold mb-2 text-lg md:text-xl">
                     Welcome to Fresh Harvest
                 </h3>
-                <h1 className="text-3xl font-bold xl:text-[80px]">
+                <h1 className="text-xl font-bold xl:text-[80px]">
                     Fresh Fruits and <br /> Vegetables
                 </h1>
                 <p className="py-6 max-w-md">
