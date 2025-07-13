@@ -21,14 +21,14 @@ const Blog = () => {
                         src={pata}
                         width={60}
                         height={10}
-                        className="absolute top-2 left-[24px] z-[10]"
+                        className="absolute top-44 left-20 "
                         alt="leaf"
                     />
                     <img
                         src={pata}
                         width={60}
                         height={10}
-                        className="absolute top-2 right-[24px] z-[-10]"
+                        className="absolute top-64 right-[24px] "
                         alt="leaf"
                     />
                 </div>
