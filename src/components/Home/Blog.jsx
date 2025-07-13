@@ -26,14 +26,14 @@ const Blog = () => {
                         src={pata}
                         width={60}
                         height={10}
-                        className="absolute transform rotate-45 bottom-20 left-20 "
+                        className="absolute transform rotate-65 bottom-40 left-20 "
                         alt="leaf"
                     />
                     <img
                         src={pata}
                         width={60}
                         height={10}
-                        className="absolute top-64 right-[20px] "
+                        className="absolute top-44 right-[20px] "
                         alt="leaf"
                     />
                 </div>

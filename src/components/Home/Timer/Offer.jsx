@@ -5,9 +5,9 @@ import bigleaf from "../../../assets/bigleaf.png"
 import dot from '../../../assets/dot.png'
 const Offer = () => {
     return (
-        <div className=" my-20 py-10 ">
-            <div className="container">
-                <div className="md:flex items-center w-11/12 mx-auto">
+        <div className=" my-20 mx-auto w-11/12 py-10  ">
+            <div >
+                <div className="md:flex items-center ">
                     <div className="md:w-3/4 mx-11/12 mx-auto">
                         <div className=" text-center md:text-left">
                             <h3 className="text-[#749B3F] inline-block bg-gray-200 px-2 rounded-sm text-fh-green font-semibold  md:text-xl  ">
@@ -31,14 +31,14 @@ const Offer = () => {
                                 src={pata}
                                 width={60}
                                 height={10}
-                                className="absolute top-[-0px] transform rotate-90 left-[-60px] z-11"
+                                className="absolute top-[-0px] transform rotate-90 left-[-0px] z-11"
                                 alt="no support image"
                             />
                             <img
                                 src={bigleaf}
                                 width={60}
                                 height={10}
-                                className="absolute bottom-[-50px]  right-[100px] z-11"
+                                className="absolute bottom-[-50px]  right-[0px] z-11"
                                 alt="no support image"
                             />
                             <img
@@ -51,9 +51,9 @@ const Offer = () => {
                         </div>
                         <img
                             src={orange}
-                            width={500}
+                            width={700}
                             height={500}
-                            className="mt-16 ml-[-100px] "
+                            className="mt-16 ml-4 "
                             alt="no image"
                         />
                     </div>

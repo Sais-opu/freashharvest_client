@@ -12,8 +12,8 @@ function App() {
       <div >
 
         <Navbar></Navbar>
-        <Home></Home>
-        <div className='w-11/12 mx-auto'>
+        
+        <div className=''>
           <Outlet></Outlet>
         </div>
         <Footer></Footer>

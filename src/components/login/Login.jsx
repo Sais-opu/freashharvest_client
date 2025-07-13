@@ -7,7 +7,7 @@ import { FcGoogle } from "react-icons/fc"; // Google Icon
 import { useRef } from "react";
 import { sendPasswordResetEmail } from "firebase/auth";
 import { auth } from "../firebase/firebase.init";
-
+import { FaFacebook } from "react-icons/fa";
 
 const Login = () => {
     const { signInUser, signInWithGoogle } = useContext(AuthContext);
@@ -165,15 +165,15 @@ const Login = () => {
                                 </button>
                             </div>
                             {/* facebook */}
-                            {/* <div className="w-full md:w-1/2 px-3">
+                            <div className="w-full md:w-1/2 px-3">
                                 <button
-                                    onClick={handleFacebookSignIn}
-                                    className="btn mt-5 btn-ghost btn-outline w-full bg-blue-600 text-white flex items-center justify-center space-x-2"
+                                    // onClick={handleFacebookSignIn}
+                                    className="btn mt-5 btn-ghost btn-outline w-full flex items-center justify-center space-x-2"
                                 >
-                                    <FaFacebook className="text-2xl" />
+                                    <FaFacebook className="text-2xl text-[#1E90FF] " />
                                     <span>Login with Facebook</span>
                                 </button>
-                            </div> */}
+                            </div>
                         </div>
                     </div>
 
