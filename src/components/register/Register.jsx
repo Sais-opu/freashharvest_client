@@ -1,9 +1,10 @@
 import { createUserWithEmailAndPassword, getAuth, updateProfile } from "firebase/auth";
 import { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { AuthContext } from "./provider/authProvider";
+import { AuthContext } from "../Provider/authProvider";
 import { Bounce, toast } from "react-toastify";
-import { FcGoogle } from "react-icons/fc"; // Importing Google icon
+import { FcGoogle } from "react-icons/fc";
+import { FaFacebook } from "react-icons/fa";
 
 const Register = () => {
     const { signInWithGoogle } = useContext(AuthContext);
@@ -115,27 +116,27 @@ const Register = () => {
     return (
         <div
             className="min-h-screen flex items-center justify-center bg-cover bg-center relative"
-            style={{ backgroundImage: `url('https://i.ibb.co.com/r2ZXRmH9/register.jpg')` }}
+        // style={{ backgroundImage: `url('https://i.ibb.co.com/r2ZXRmH9/register.jpg')` }}
         >
             {/* Blurred Form Container */}
-            <div className="bg-gradient-to-r from-indigo-800 to-teal-600 bg-opacity-30 backdrop-blur-md p-10 rounded-lg shadow-lg w-full max-w-lg">
-                <h1 className="text-5xl font-bold mb-5 text-white text-center">Register Here</h1>
+            <div className="bg-white bg-opacity-30 backdrop-blur-md p-10 rounded-lg shadow-lg w-full max-w-lg">
+                <h1 className="text-5xl font-bold mb-5 text-black text-center">Register Here</h1>
 
                 <form onSubmit={handleRegister} className="w-full">
-                    <div className="flex flex-wrap -mx-3 mb-6">
-                        <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
-                            <label className="block uppercase tracking-wide text-white text-xs font-bold mb-2">
-                                First Name
-                            </label>
-                            <input
-                                type="text"
-                                name="fname"
-                                placeholder="Your first name"
-                                className="appearance-none block w-full bg-gray-200 text-gray-700 border rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white"
-                                required
-                            />
-                        </div>
-                        <div className="w-full md:w-1/2 px-3">
+                    {/* <div className="flex flex-wrap -mx-3 mb-6"> */}
+                    <div className="w-full pb-6 md:mb-0">
+                        <label className="block uppercase tracking-wide text-black text-xs font-bold mb-2">
+                            Full Name
+                        </label>
+                        <input
+                            type="text"
+                            name="fname"
+                            placeholder="Your first name"
+                            className="appearance-none block w-full bg-gray-200 text-gray-700 border rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white"
+                            required
+                        />
+                    </div>
+                    {/* <div className="w-full md:w-1/2 px-3">
                             <label className="block uppercase tracking-wide text-white text-xs font-bold mb-2">
                                 Last Name
                             </label>
@@ -147,10 +148,10 @@ const Register = () => {
                                 required
                             />
                         </div>
-                    </div>
+                    </div> */}
 
                     <div className="mb-6">
-                        <label className="block uppercase tracking-wide text-white text-xs font-bold mb-2">
+                        <label className="block uppercase tracking-wide text-black text-xs font-bold mb-2">
                             Email
                         </label>
                         <input
@@ -163,7 +164,7 @@ const Register = () => {
                     </div>
 
                     <div className="mb-6">
-                        <label className="block uppercase tracking-wide text-white text-xs font-bold mb-2">
+                        <label className="block uppercase tracking-wide text-black text-xs font-bold mb-2">
                             Password
                         </label>
                         <div className="relative">
@@ -185,24 +186,45 @@ const Register = () => {
                         {passwordError && <p className="text-red-500 text-xs italic mt-2">{passwordError}</p>}
                     </div>
 
-                    <button type="submit" className="btn mt-5 btn-ghost btn-outline w-full">
+                    <button type="submit" className="btn bg-[#FF6A1A] mt-5 btn-ghost text-white w-full">
                         Register Now
                     </button>
 
                     <div className="mt-3">
-                        <hr />
-                        <button
-                            onClick={handleGoogleSignIn}
-                            className="btn mt-5 btn-ghost btn-outline w-full bg-teal-300 flex items-center justify-center space-x-2 animate-bounce"
-                        >
-                            <FcGoogle className="text-2xl" />
-                            <span>Login with Google</span>
-                        </button>
+                        <div className="flex items-center justify-center my-2">
+                            <div className="flex-grow border-t border-gray-300"></div>
+                            <span className="mx-4 text-gray-600 font-medium">Or Sign in with</span>
+                            <div className="flex-grow border-t border-gray-300"></div>
+                        </div>
+
+                        <div className="flex flex-wrap -mx-3 mb-6">
+                            <div className="w-full md:w-1/2 px-3">
+                                {/* google button */}
+                                <button
+                                    onClick={handleGoogleSignIn}
+                                    className="btn mt-5 btn-ghost btn-outline w-full flex items-center justify-center space-x-2"
+                                >
+                                    <FcGoogle className="text-2xl" />
+                                    <span>Login with Google</span>
+                                </button>
+                            </div>
+                            {/* facebook */}
+                            {/* <div className="w-full md:w-1/2 px-3">
+                                <button
+                                    onClick={handleFacebookSignIn}
+                                    className="btn mt-5 btn-ghost btn-outline w-full bg-blue-600 text-white flex items-center justify-center space-x-2"
+                                >
+                                    <FaFacebook className="text-2xl" />
+                                    <span>Login with Facebook</span>
+                                </button>
+                            </div> */}
+                        </div>
+
                     </div>
 
-                    <p className="mt-5 text-center text-white">
+                    <p className="mt-5 text-center text-black">
                         Already have an account?{" "}
-                        <Link to="/login" className="text-blue-300 underline">
+                        <Link to="/login" className="text-[#FF6A1A]">
                             Log in here
                         </Link>
                     </p>

@@ -1,5 +1,6 @@
 import About from "./About";
-
+import Blog from "./Blog";
+import Shop from "./Shop";
 
 const Home = () => {
     return (
@@ -14,8 +15,13 @@ const Home = () => {
                 {/* Content over the image */}
                 
             </div>
-            // about
+            
+            {/* shop */}
+            <Shop></Shop>
+            {/*about */}
             <About></About>
+            {/* Blog */}
+            <Blog></Blog>
         </div>
     );
 };
