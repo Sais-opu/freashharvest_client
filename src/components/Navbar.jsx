@@ -230,6 +230,7 @@ import { NavLink } from "react-router-dom";
 import { AuthContext } from "../components/provider/authProvider";
 import { useContext } from "react";
 import logo from '../assets/logo.png';
+import { MdOutlineFavorite, MdShoppingCart } from "react-icons/md";
 
 const UserAvatar = ({ photoURL, displayName }) => (
     <div className="relative group">
@@ -379,22 +380,24 @@ const Navbar = () => {
                             to="/favourite"
                             className={({ isActive }) =>
                                 isActive
-                                    ? "px-3 pb-1 border-b-2 text-white"
-                                    : "px-3 pb-1 text-white hover:underline"
+                                    ? "px-3 pb-1 border-b-2 text-white flex"
+                                    : "px-3 pb-1 text-white hover:underline flex"
                             }
                         >
-                            Favourite
+                            <MdOutlineFavorite className="text-xl pt-1.5" />
+                                <span>Favorites</span>
                         </NavLink>
 
                         <NavLink
                             to="/cart"
                             className={({ isActive }) =>
                                 isActive
-                                    ? "px-3 pb-1 border-b-2 text-white"
-                                    : "px-3 pb-1 text-white hover:underline"
+                                    ? "px-3 pb-1 border-b-2 text-white flex"
+                                    : "px-3 pb-1 text-white hover:underline flex"
                             }
                         >
-                            Cart
+                            <MdShoppingCart className="text-xl"  />
+                            <span>Cart</span>
                         </NavLink>
 
                         {user?.photoURL && (
