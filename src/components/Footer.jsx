@@ -2,20 +2,25 @@
 import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
 import { IoIosCall } from "react-icons/io";
 import { IoLocationOutline, IoMailOutline } from "react-icons/io5";
+import logo from '../assets/logo.png';
+import { NavLink } from "react-router-dom";
 
 const Footer = () => {
     return (
         <footer className="bg-gray-100 text-gray-700">
             <div className="max-w-8xl mx-auto px-6 py-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
                 <div>
-                    <a href="/">
-                        <img
-                            src="/assets/images/logo.png"
-                            width={170}
-                            height={80}
-                            alt="Fresh Harvests logo"
-                        />
-                    </a>
+                    <div>
+                        <NavLink
+                            to="/"
+                            className="flex items-center gap-2 btn btn-ghost normal-case text-lg md:text-xl font-bold"
+                        >
+                            <img className="w-10 h-10" src={logo} alt="Logo" />
+                            <span className="hidden md:block text-black drop-shadow">
+                                Fresh Harvest
+                            </span>
+                        </NavLink>
+                    </div>
                     <h5 className="mt-8 font-semibold text-lg">Download App:</h5>
                     <div className="flex flex-col sm:flex-row sm:space-x-4 mt-4 space-y-3 sm:space-y-0">
                         <img
@@ -36,34 +41,34 @@ const Footer = () => {
                 <div>
                     <h6 className="text-xl font-semibold mb-4">Quick Links</h6>
                     <ul className="space-y-2">
-                        <li><a href="/" className="hover:text-green-700">Home</a></li>
-                        <li><a href="/shop" className="hover:text-green-700">Shop</a></li>
-                        <li><a href="/about" className="hover:text-green-700">About</a></li>
-                        <li><a href="/blog" className="hover:text-green-700">Detail Blog</a></li>
+                        <li><a href="/" className="hover:text-[#749B3F]">Home</a></li>
+                        <li><a href="/shop" className="hover:text-[#749B3F]">Shop</a></li>
+                        <li><a href="/about" className="hover:text-[#749B3F]">About</a></li>
+                        <li><a href="/blog" className="hover:text-[#749B3F]">Detail Blog</a></li>
                     </ul>
                 </div>
                 <div>
                     <h6 className="text-xl font-semibold mb-4">Account</h6>
                     <ul className="space-y-2">
-                        <li><a href="/favorites" className="hover:text-green-700">Favorites</a></li>
-                        <li><a href="/cart" className="hover:text-green-700">Cart</a></li>
-                        <li><a href="/signin" className="hover:text-green-700">Sign In</a></li>
-                        <li><a href="/register" className="hover:text-green-700">Register</a></li>
+                        <li><a href="/favorites" className="hover:text-[#749B3F]">Favorites</a></li>
+                        <li><a href="/cart" className="hover:text-[#749B3F]">Cart</a></li>
+                        <li><a href="/signin" className="hover:text-[#749B3F]">Sign In</a></li>
+                        <li><a href="/register" className="hover:text-[#749B3F]">Register</a></li>
                     </ul>
                 </div>
                 <div>
                     <h6 className="text-xl font-semibold mb-4">Contact Us</h6>
                     <ul className="space-y-3">
                         <li className="flex items-center gap-2">
-                            <IoIosCall className="text-green-600 text-xl" />
+                            <IoIosCall className="text-[#749B3F] text-xl" />
                             <span>1234 5678 90</span>
                         </li>
                         <li className="flex items-center gap-2">
-                            <IoMailOutline className="text-green-600 text-xl" />
+                            <IoMailOutline className="text-[#749B3F] text-xl" />
                             <span>Freshharvests@gmail.com</span>
                         </li>
                         <li className="flex items-center gap-2">
-                            <IoLocationOutline className="text-green-600 text-xl" />
+                            <IoLocationOutline className="text-[#749B3F] text-xl" />
                             <span>Tanjung Sari Street, Pontianak, Indonesia</span>
                         </li>
                     </ul>
@@ -104,7 +109,7 @@ const Footer = () => {
                             href="https://twitter.com"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="w-10 h-10 bg-green-700 text-white rounded-full flex justify-center items-center"
+                            className="w-10 h-10 bg-black text-white rounded-full flex justify-center items-center"
                         >
                             <FaTwitter className="text-xl" />
                         </a>
@@ -112,7 +117,7 @@ const Footer = () => {
                             href="https://facebook.com"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="w-10 h-10 bg-green-700 text-white rounded-full flex justify-center items-center"
+                            className="w-10 h-10 bg-black text-white rounded-full flex justify-center items-center"
                         >
                             <FaFacebookF className="text-xl" />
                         </a>
@@ -120,7 +125,7 @@ const Footer = () => {
                             href="https://instagram.com"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="w-10 h-10 bg-green-700 text-white rounded-full flex justify-center items-center"
+                            className="w-10 h-10 bg-black text-white rounded-full flex justify-center items-center"
                         >
                             <FaInstagram className="text-xl" />
                         </a>
