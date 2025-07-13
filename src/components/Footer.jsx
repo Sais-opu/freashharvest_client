@@ -1,61 +1,75 @@
-
 import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
 import { IoIosCall } from "react-icons/io";
 import { IoLocationOutline, IoMailOutline } from "react-icons/io5";
 import logo from '../assets/logo.png';
 import { NavLink } from "react-router-dom";
+import Store from "./Home/Store";
+import visa from '../assets/visa.png'
+import pal from '../assets/pal.png'
+import apple from '../assets/bkash.png'
+import app from '../assets/app.png'
+import google from '../assets/google.png'
+
 
 const Footer = () => {
     return (
         <footer className="bg-gray-100 text-gray-700">
             <div className="max-w-8xl mx-auto px-6 py-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
-                <div>
-                    <div>
-                        <NavLink
-                            to="/"
-                            className="flex items-center gap-2 btn btn-ghost normal-case text-lg md:text-xl font-bold"
-                        >
+
+                {/* Column 1: Logo and Download */}
+                {/* <div>
+                    <NavLink
+                        to="/"
+                        className="flex items-center  btn btn-ghost normal-case text-lg md:text-xl font-bold"
+                    >
+                        <img className="w-10 h-10" src={logo} alt="Logo" />
+                        <span className="hidden md:block text-black drop-shadow">Fresh Harvest</span>
+                    </NavLink>
+
+                    <Store />
+                    
+                </div> */}
+
+                <div className="flex flex-col items-start text-left space-y-4">
+                    <div className="w-60">
+                        <a href="/" className="flex items-center gap-2 text-lg md:text-xl font-bold">
                             <img className="w-10 h-10" src={logo} alt="Logo" />
-                            <span className="hidden md:block text-black drop-shadow">
-                                Fresh Harvest
-                            </span>
-                        </NavLink>
+                            <span className="hidden md:block text-black drop-shadow">Fresh Harvest</span>
+                        </a>
                     </div>
-                    <h5 className="mt-8 font-semibold text-lg">Download App:</h5>
-                    <div className="flex flex-col sm:flex-row sm:space-x-4 mt-4 space-y-3 sm:space-y-0">
-                        <img
-                            width={130}
-                            height={40}
-                            src="/assets/images/apple.png"
-                            alt="App Store"
-                        />
-                        <img
-                            width={130}
-                            height={40}
-                            src="/assets/images/google.png"
-                            alt="Google Play"
-                        />
-                        {/* <Stores /> */}
+                    <div>
+                        <p>Download App:</p>
+                        <div className="flex gap-2">
+                            <a href="#"><img src={app} alt="App Store" /></a>
+                            <a href="#"><img src={google} alt="Google Play" /></a>
+                        </div>
                     </div>
                 </div>
+
+
+                {/* Column 2: Quick Links */}
                 <div>
                     <h6 className="text-xl font-semibold mb-4">Quick Links</h6>
                     <ul className="space-y-2">
-                        <li><a href="/" className="hover:text-[#749B3F]">Home</a></li>
-                        <li><a href="/shop" className="hover:text-[#749B3F]">Shop</a></li>
-                        <li><a href="/about" className="hover:text-[#749B3F]">About</a></li>
-                        <li><a href="/blog" className="hover:text-[#749B3F]">Detail Blog</a></li>
+                        <li><NavLink to="/" className="hover:text-[#749B3F]">Home</NavLink></li>
+                        <li><NavLink to="/shop" className="hover:text-[#749B3F]">Shop</NavLink></li>
+                        <li><NavLink to="/about" className="hover:text-[#749B3F]">About</NavLink></li>
+                        <li><NavLink to="/blog" className="hover:text-[#749B3F]">Detail Blog</NavLink></li>
                     </ul>
                 </div>
+
+                {/* Column 3: Account */}
                 <div>
                     <h6 className="text-xl font-semibold mb-4">Account</h6>
                     <ul className="space-y-2">
-                        <li><a href="/favorites" className="hover:text-[#749B3F]">Favorites</a></li>
-                        <li><a href="/cart" className="hover:text-[#749B3F]">Cart</a></li>
-                        <li><a href="/signin" className="hover:text-[#749B3F]">Sign In</a></li>
-                        <li><a href="/register" className="hover:text-[#749B3F]">Register</a></li>
+                        <li><NavLink to="/favorites" className="hover:text-[#749B3F]">Favorites</NavLink></li>
+                        <li><NavLink to="/cart" className="hover:text-[#749B3F]">Cart</NavLink></li>
+                        <li><NavLink to="/signin" className="hover:text-[#749B3F]">Sign In</NavLink></li>
+                        <li><NavLink to="/register" className="hover:text-[#749B3F]">Register</NavLink></li>
                     </ul>
                 </div>
+
+                {/* Column 4: Contact Us */}
                 <div>
                     <h6 className="text-xl font-semibold mb-4">Contact Us</h6>
                     <ul className="space-y-3">
@@ -76,24 +90,24 @@ const Footer = () => {
                     <h6 className="font-semibold text-lg mt-6">Accepted Payments:</h6>
                     <div className="flex gap-4 mt-3">
                         <img
-                            src="/assets/images/paymentLogo/pay1.png"
+                            src={visa}
                             width={95}
                             height={67}
                             alt="Visa"
                             className="h-16"
                         />
                         <img
-                            src="/assets/images/paymentLogo/pay2.png"
+                            src={pal}
                             width={95}
                             height={60}
                             alt="MasterCard"
                             className="h-16"
                         />
                         <img
-                            src="/assets/images/paymentLogo/pay3.png"
+                            src={apple}
                             width={95}
                             height={65}
-                            alt="bKash"
+                            alt="apple"
                             className="h-16"
                         />
                     </div>
