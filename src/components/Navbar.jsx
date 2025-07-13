@@ -379,8 +379,8 @@ const Navbar = () => {
                             to="/favourite"
                             className={({ isActive }) =>
                                 isActive
-                                    ? "px-3 pb-1 border-b-2 border-green-500 text-black"
-                                    : "px-3 pb-1 text-gray-700 hover:underline"
+                                    ? "px-3 pb-1 border-b-2 text-white"
+                                    : "px-3 pb-1 text-white hover:underline"
                             }
                         >
                             Favourite
@@ -390,8 +390,8 @@ const Navbar = () => {
                             to="/cart"
                             className={({ isActive }) =>
                                 isActive
-                                    ? "px-3 pb-1 border-b-2 border-green-500 text-black"
-                                    : "px-3 pb-1 text-gray-700 hover:underline"
+                                    ? "px-3 pb-1 border-b-2 text-white"
+                                    : "px-3 pb-1 text-white hover:underline"
                             }
                         >
                             Cart
@@ -410,11 +410,11 @@ const Navbar = () => {
                             </button>
                         ) : (
                             <>
-                                <NavLink to="/register" className="btn bg-teal-900 text-white px-3 py-1">
+                                {/* <NavLink to="/register" className="btn bg-teal-900 text-white px-3 py-1">
                                     Sign Up
-                                </NavLink>
-                                <NavLink to="/login" className="btn bg-teal-900 text-white px-3 py-1">
-                                    Log In
+                                </NavLink> */}
+                                <NavLink to="/login" className="border-2 rounded-lg border-white text-white px-3 py-1">
+                                    Sign In
                                 </NavLink>
                             </>
                         )}

@@ -42,7 +42,7 @@ const Blog = () => {
 
             <div className="flex w-[70%] mx-auto justify-around items-center gap-6 relative">
                 <div className="flex-shrink-0">
-                    <img src={fa} alt="Customer" className="w-[300px] h-auto " />
+                    <img src={fa} alt="Customer" className="w-[300px] h-auto rounded-r-full rounded-l-full " />
                 </div>
                 <div className="max-w-xl text-lg">
                     <p className="Questrial">
