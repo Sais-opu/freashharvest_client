@@ -135,7 +135,7 @@ const ProductGrid = () => {
                             <h6 className="text-sm text-gray-600">${product.price}/kg</h6>
 
                             <div className="mt-4 space-y-2">
-                                <button className="w-full text-black border border-gray-500 px-4 py-2 rounded hover:bg-orange-700 hover:text-white transition">
+                                <button className="w-full text-black border border-gray-500 px-4 py-2 rounded hover:bg-[#FF6A1A] hover:text-white transition">
                                     Add to Cart
                                 </button>
 
