@@ -36,7 +36,7 @@ import line from "../../assets/hr-line.png"
 
 const BannerSalad = () => {
     return (
-        <div className="md:flex mt-8 mb-15 lg:my-0 items-start text-left">
+        <div className="md:flex mt-8 mb-15 lg:my-0 items-start text-left w-11/12 mx-auto">
             {/* Left Line Image */}
             <div className="hidden lg:block ml-4">
                 <img
@@ -80,41 +80,44 @@ const BannerSalad = () => {
 
 const Home = () => {
     return (
-        <div className="w-full relative">
-            {/* Hero Section */}
-            <img
-                src="https://i.ibb.co/ns3sjQcb/hero2.png"
-                alt="Hero"
-                className="w-full h-auto object-cover"
-            />
-            <div className="absolute top-0 left-0 w-11/12 mx-auto p-8 min-h-screen">
-                {/* Text Content on Top of Image */}
-                <h3 className="bg-gray-100 rounded-xl inline-block py-1 px-3 text-[#749B3F] font-semibold mb-2 text-lg md:text-xl">
-                    Welcome to Fresh Harvest
-                </h3>
-                <h1 className="text-xl font-bold xl:text-[80px]">
-                    Fresh Fruits and <br /> Vegetables
-                </h1>
-                <p className="py-6 max-w-md">
-                    At Fresh Harvests, we are passionate about providing you with the
-                    freshest and most flavorful fruits and vegetables
-                </p>
-                <button className="btn rounded-lg bg-fh-primary text-lg py-5 bg-[#FF6A1A] text-white px-8">
-                    Shop Now
-                </button>
 
-                {/* Inline BannerSalad Component */}
-                <BannerSalad />
+        <div className="">
+            <div className="w-full relative">
+                {/* Hero Section */}
+                <img
+                    src="https://i.ibb.co/ns3sjQcb/hero2.png"
+                    alt="Hero"
+                    className="w-full h-auto object-cover"
+                />
+                <div className="absolute top-0 left-0 w-11/12 mx-auto p-8 min-h-screen">
+                    {/* Text Content on Top of Image */}
+                    <h3 className="bg-gray-100 rounded-xl inline-block py-1 px-3 text-[#749B3F] font-semibold mb-2 text-lg md:text-xl">
+                        Welcome to Fresh Harvest
+                    </h3>
+                    <h1 className="text-xl font-bold xl:text-[80px]">
+                        Fresh Fruits and <br /> Vegetables
+                    </h1>
+                    <p className="py-6 max-w-md">
+                        At Fresh Harvests, we are passionate about providing you with the
+                        freshest and most flavorful fruits and vegetables
+                    </p>
+                    <button className="btn rounded-lg bg-fh-primary text-lg py-5 bg-[#FF6A1A] text-white px-8">
+                        Shop Now
+                    </button>
 
-                {/* Store component for app download buttons */}
-                <Store />
-            </div>
+                    {/* Inline BannerSalad Component */}
+                    <BannerSalad />
 
-            {/* Sections Below Hero */}
-            <div className="relative z-10 bg-white">
-                <Shop />
-                <About />
-                <Blog />
+                    {/* Store component for app download buttons */}
+                    <Store />
+                </div>
+
+                {/* Sections Below Hero */}
+                <div className="relative z-10 bg-white">
+                    <Shop />
+                    <About />
+                    <Blog />
+                </div>
             </div>
         </div>
     );
